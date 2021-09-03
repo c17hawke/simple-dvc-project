@@ -29,3 +29,6 @@ def save_local_df(df, df_path, header=False):
     else:
         df.to_csv(df_path, index=False)
 
+def save_reports(filepath: str, report: dict):
+    with open(filepath, "w") as f:
+        json.dump(report, f, indent=4)
