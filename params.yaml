@@ -1,0 +1,19 @@
+base:
+  project: simple-dvc-project
+  random_state: 42
+  target_col: quality
+  test_size: 0.2
+
+data_source:
+  s3_source: https://dvc-demo-datasets.s3.ap-south-1.amazonaws.com/winequality_data/winequality-red.csv
+
+artifacts:
+  artifacts_dir: artifacts
+
+  raw_local_data_dir: artifacts/raw_local_data_dir
+  raw_local_data: artifacts/raw_local_data_dir/data.csv
+
+  split_data:
+    processed_data_dir: artifacts/processed_data
+    train_path: artifacts/processed_data/train.csv
+    test_path: artifacts/processed_data/test.csv
